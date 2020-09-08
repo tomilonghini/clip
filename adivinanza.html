@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lorem Ipsum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body
+style=
+"
+  height: 100%;
+  background-repeat: no-repeat;
+  background: url(images/Fondos-para-páginas-web.jpg) no-repeat center
+    center fixed;
+  background-size: 100% 100%;
+"
+class="container text-center" style="border: none">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="https://www.w3schools.com/" target="_blank">WW3</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="table.html">Tabla</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#imagen">Imágenes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+  </nav>
+<hr> 
+<div class="transbox">
+    
+     <h1>Pregunta</h1>
+     <h2>¿Donde jugará Messi?</h2>
+     
+            <fieldset>
+              <div class="form">
+               
+                  <label for="guessField">Respuesta: </label> 
+                  <input type = "text" id = "guessField" class = "guessField"> 
+                  <input type = "submit" value = "Enviar" class = "guessSubmit" id = "dondejuega"> 
+
+              </div> 
+
+            </fieldset>
+</div>
+
+ <hr>
+    
+    <footer>
+        <style>
+          footer 
+          {
+            text-align: center;
+            padding: 10px;
+            background-color:#4d4d4d;
+            color: white;
+          }
+          </style>
+          <pr>Prueba de footer</pr>
+    </footer>
+    
+<script type = "text/javascript"> 
+                
+        var respuesta="Barcelona";
+        var guess = 1;
+        document.getElementById("dondejuega").onclick = function()
+            { 
+                                  
+                 var userResponse = document.getElementById("guessField").value; 
+                
+                 if(userResponse==respuesta) 
+                {     
+                     alert("Correcto, Messi jugará en "+respuesta); 
+                } 
+                 else if((userResponse!=respuesta) &guess==1) 
+                {
+                  chances=4-guess;
+                     guess++;     
+                     alert("\n\nIncorrecto\n\n\n Pista: Este club ganó la copa de Europa en 1994 \n\n\n Quedan 3 intentos"); 
+                } 
+                 
+                 else if((userResponse != respuesta) &guess==2)
+                {
+                  intentos_restantes=4-guess;
+                  guess++;
+                   alert("\n\nIncorrecto\n\n\n Pista: Aquí lo dirigió Guardiola");
+                }
+                 else if((userResponse != respuesta) &guess==3)
+                {
+                  intentos_restantes=4-guess;
+                  guess++;
+                   alert("\n\nÚtima chance\n\n\n");
+                }
+                else if((userResponse != respuesta) &guess==4)
+                {
+                 alert("\n\nMessi jugará en: "+respuesta)
+                }
+                 
+            } 
+              </script>
+</body>
+</html>
